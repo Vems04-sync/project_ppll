@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Undangan Pernikahan</title>
+    <link
+      rel="icon"
+      href="../resources/img/icons/pleart.png"
+      type="image/png"
+    />
+    <link rel="stylesheet" href="../resources/css/navbar.css" />
+    <link rel="stylesheet" href="../resources/css/productdetail.css" />
+    <link rel="stylesheet" href="../resources/css/footer.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <!-- Navbar -->
+      <nav class="navbar">
+        <div class="logo">
+          <img
+            src="../resources/img/icons/pleart.png"
+            alt="Logo"
+            class="logo-image"
+          />
+          <p>PleeArt.</p>
+          <div class="burger" id="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+          </div>
+        </div>
+
+        <div class="center-items">
+          <ul class="nav-links" id="nav-links">
+            <div class="search-bar">
+              <form action="" method="POST" class="search-input">
+                <label
+                  ><img src="../resources/img/icons/search.png" alt="search"
+                /></label>
+                <input
+                  type="text"
+                  id="navbarSearchBox"
+                  name="query"
+                  placeholder="Cari produk..."
+                />
+              </form>
+            </div>
+            <li><a href="index.html" class="home">Home</a></li>
+            <li>
+              <a href="cetak_undangan.html" class="links">Cetak Undangan</a>
+            </li>
+            <li><a href="services/aboutus.html" class="links">About Us</a></li>
+            <li><a href="services/contact.html" class="links">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="user-options">
+          <a href="#" class="cart" id="cartButton">
+            <img src="../resources/img/icons/shoppingcart.png" alt="Cart" />
+            <span class="cart-count" id="cart-count" style="display: none"
+              >0</span
+            >
+          </a>
+        </div>
+      </nav>
+
+      <!-- Menampilkan hasil pencarian -->
+      <div id="navbarSearchResults" class="search-results"></div>
+
+      <div class="content">
+        <div class="content-detail">
+          <div class="product-detail">
+            <!-- Section Gambar -->
+            <div class="image-gallery">
+              <div class="image-zoom">
+                <div
+                  class="main-image"
+                  onmousemove="zoomImage(event)"
+                  onmouseleave="resetImage()"
+                >
+                  <img
+                    id="mainImage"
+                    src="../resources/img/homeimg/khitanan.jpeg"
+                    alt="Product Image"
+                  />
+                </div>
+              </div>
+              <div class="thumbnail-images">
+                <img
+                  src="../resources/img/homeimg/khitanan.jpeg"
+                  alt="Thumbnail 1"
+                  class="thumb"
+                  onclick="changeImage(this)"
+                />
+                <img
+                  src="../resources/img/homeimg/pernikahan.jpg"
+                  alt="Thumbnail 2"
+                  class="thumb"
+                  onclick="changeImage(this)"
+                />
+                <img
+                  src="../resources/img/homeimg/ulangtahun.jpeg"
+                  alt="Thumbnail 3"
+                  class="thumb"
+                  onclick="changeImage(this)"
+                />
+              </div>
+            </div>
+
+            <!-- Section Informasi Produk -->
+            <div class="product-info">
+              <h1>Undangan Khitanan Premium</h1>
+              <p class="price">Rp. 15.000/Lembar</p>
+
+              <div class="description">
+                <h4>Deskripsi Produk</h4>
+                <p>
+                  Undangan khitanan dengan desain premium yang elegan dan
+                  modern. Cocok untuk acara khitanan yang berkesan.
+                </p>
+              </div>
+
+              <div class="order-form">
+                <h4>Detail Pemesanan</h4>
+                <form id="orderForm">
+                  <div class="form-group">
+                    <label for="customerName">Nama</label>
+                    <input type="text" id="customerName" name="customerName" placeholder="Nama lengkap" required />
+                  </div>
+                  <div class="form-group">
+                    <label for="customerPhone">No. HP</label>
+                    <input type="tel" id="customerPhone" name="customerPhone" placeholder="08xxxxxxxxxx" required />
+                  </div>
+                  <div class="form-group">
+                    <label for="eventDate">Tanggal Acara</label>
+                    <input type="date" id="eventDate" name="eventDate" required />
+                  </div>
+                  <div class="form-group">
+                    <label for="quantity">Jumlah Lembar</label>
+                    <input type="number" id="quantity" name="quantity" min="1" value="1" required />
+                  </div>
+                  <div class="form-group">
+                    <label for="address">Alamat</label>
+                    <textarea id="address" name="address" rows="3" placeholder="Alamat lengkap" required></textarea>
+                  </div>
+                  <div class="form-group">
+                    <label for="notes">Catatan</label>
+                    <textarea id="notes" name="notes" rows="3" placeholder="Catatan tambahan (opsional)"></textarea>
+                  </div>
+                </form>
+              </div>
+
+              <div class="quantity">
+                <button class="order-btn" onclick="redirectToWA()">
+                  <img
+                    src="../resources/img/icons/cart.png"
+                    class="cart-icon"
+                    alt=""
+                  />
+                  Pesan Sekarang
+                </button>
+              </div>
+
+              <h2>Undangan Lainnya</h2>
+              <div class="product-container">
+                <div class="product-card">
+                  <img
+                    class="product"
+                    src="../resources/img/homeimg/pernikahan.jpg"
+                    alt="Undangan Pernikahan"
+                  />
+                  <p class="product-name">Undangan Pernikahan</p>
+                  <div class="description">
+                    <h6>Deskripsi Produk</h6>
+                    <p>
+                      Undangan pernikahan dengan desain elegan dan romantis.
+                    </p>
+                  </div>
+                  <p class="product-price">Rp. 20.000</p>
+                  <a href="productdetail.html" class="detail-button">
+                    <img
+                      class="cart-icon"
+                      src="../resources/img/icons/cart.png"
+                      alt=""
+                    />
+                    <p>Lihat Detail</p>
+                  </a>
+                </div>
+                <div class="product-card">
+                  <img
+                    class="product"
+                    src="../resources/img/homeimg/ulangtahun.jpeg"
+                    alt="Undangan Ulang Tahun"
+                  />
+                  <p class="product-name">Undangan Ulang Tahun</p>
+                  <div class="description">
+                    <h6>Deskripsi Produk</h6>
+                    <p>Undangan ulang tahun dengan desain ceria dan menarik.</p>
+                  </div>
+                  <p class="product-price">Rp. 12.000</p>
+                  <a href="productdetail.html" class="detail-button">
+                    <img
+                      class="cart-icon"
+                      src="../resources/img/icons/cart.png"
+                      alt=""
+                    />
+                    <p>Lihat Detail</p>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Overlay -->
+      <div id="overlay" class="overlay">
+        <div class="overlay-content">
+          <div class="checkmark-container">
+            <div class="checkmark-circle">
+              <div class="checkmark">✓</div>
+            </div>
+          </div>
+          <p id="overlayMessage"></p>
+          <a href="javascript:hideOverlay()" class="btn-lanjut"
+            >Lanjut Belanja</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function redirectToWA() {
+        const nameInput = document.getElementById('customerName');
+        const phoneInput = document.getElementById('customerPhone');
+        const dateInput = document.getElementById('eventDate');
+        const quantityInput = document.getElementById('quantity');
+        const addressInput = document.getElementById('address');
+        const notesInput = document.getElementById('notes');
+
+        const name = (nameInput?.value || '').trim();
+        const phoneRaw = (phoneInput?.value || '').trim();
+        const eventDate = (dateInput?.value || '').trim();
+        const quantity = (quantityInput?.value || '').trim();
+        const address = (addressInput?.value || '').trim();
+        const notes = (notesInput?.value || '').trim();
+
+        if (!name || !phoneRaw || !eventDate || !quantity || !address) {
+          alert('Mohon lengkapi semua data wajib: Nama, No. HP, Tanggal Acara, Jumlah, dan Alamat.');
+          return;
+        }
+
+        let normalizedPhone = phoneRaw.replace(/[^0-9+]/g, '');
+        if (normalizedPhone.startsWith('+')) {
+          normalizedPhone = normalizedPhone.slice(1);
+        }
+        if (normalizedPhone.startsWith('0')) {
+          normalizedPhone = '62' + normalizedPhone.slice(1);
+        }
+
+        const productTitle = document.querySelector('.product-info h1')?.textContent?.trim() || 'Produk';
+        const productPrice = document.querySelector('.product-info .price')?.textContent?.trim() || '';
+
+        const message = `Halo Admin PleeArt, saya ingin memesan:\n\n` +
+          `Produk: ${productTitle}\n` +
+          (productPrice ? `Harga: ${productPrice}\n\n` : `\n`) +
+          `Data Pemesanan:\n` +
+          `Nama: ${name}\n` +
+          `No. HP: ${normalizedPhone}\n` +
+          `Tanggal Acara: ${eventDate}\n` +
+          `Jumlah Lembar: ${quantity}\n` +
+          `Alamat: ${address}\n` +
+          `Catatan: ${notes || '-' }\n\n` +
+          `Mohon konfirmasi ketersediaan dan proses selanjutnya.`;
+
+        const adminNumber = '6287853338254';
+        const waUrl = `https://wa.me/${adminNumber}?text=${encodeURIComponent(message)}`;
+        window.open(waUrl, '_blank');
+      }
+    </script>
+  </body>
+</html>
