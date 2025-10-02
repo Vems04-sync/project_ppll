@@ -15,7 +15,6 @@
   </head>
 
   <body>
-    <!-- Navbar -->
     <nav class="navbar">
       <div class="logo">
         <img
@@ -65,10 +64,8 @@
       </div>
     </nav>
 
-    <!-- Menampilkan hasil pencarian -->
     <div id="navbarSearchResults" class="search-results"></div>
 
-    <!-- Content -->
     <div class="contact-us-wrapper">
       <div class="contact-us-container">
         <div class="image-container">
@@ -81,7 +78,7 @@
         <div class="contact-us-content">
           <h1>Contact Us</h1>
 
-          <form action="#" method="POST" class="contact-form">
+          <form class="contact-form" id="whatsapp-form">
             <label for="full-name">Full Name</label>
             <input
               type="text"
@@ -109,7 +106,7 @@
               required
             ></textarea>
 
-            <button type="submit" class="contact-btn">Send</button>
+            <button type="submit" class="contact-btn">Send via WhatsApp</button>
           </form>
 
           <div class="contact-info">
@@ -154,8 +151,36 @@
       <a href="../index.html" class="back-button">&laquo; Kembali</a>
     </div>
 
-    <!-- Scripts -->
     <script src="../../resources/js/burgersidebar.js"></script>
     <script src="../../resources/js/livesearch.js"></script>
+
+    <script>
+      document
+        .getElementById("whatsapp-form")
+        .addEventListener("submit", function (event) {
+          // Mencegah form dari pengiriman standar
+          event.preventDefault();
+
+          // Ambil data dari setiap input
+          const fullName = document.getElementById("full-name").value;
+          const email = document.getElementById("email").value;
+          const message = document.getElementById("message").value;
+
+          // Nomor WhatsApp tujuan (diambil dari link yang sudah ada)
+          const phoneNumber = "6287853338254";
+
+          // Buat format pesan untuk WhatsApp
+          const waMessage = `Halo, saya ingin bertanya.\n\n*Nama:* ${fullName}\n*Email:* ${email}\n*Pesan:* ${message}`;
+
+          // Encode pesan agar sesuai format URL
+          const encodedMessage = encodeURIComponent(waMessage);
+
+          // Buat URL lengkap untuk WhatsApp
+          const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+
+          // Buka WhatsApp di tab baru
+          window.open(whatsappURL, "_blank");
+        });
+    </script>
   </body>
 </html>
