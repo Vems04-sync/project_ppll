@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Undangan Pernikahan</title>
+    <link
+      rel="icon"
+      href="../resources/img/icons/pleart.png"
+      type="image/png"
+    />
+    <link rel="stylesheet" href="../resources/css/dashboard.css" />
+    <link rel="stylesheet" href="../resources/css/navbar.css" />
+    <link rel="stylesheet" href="../resources/css/footer.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <!-- Navbar -->
+      <nav class="navbar">
+        <div class="logo">
+          <img
+            src="../resources/img/icons/pleart.png"
+            alt="Logo"
+            class="logo-image"
+          />
+          <p>PleeArt.</p>
+          <div class="burger" id="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+          </div>
+        </div>
+
+        <div class="center-items">
+          <ul class="nav-links" id="nav-links">
+            <div class="search-bar">
+              <form action="" method="POST" class="search-input">
+                <label
+                  ><img src="../resources/img/icons/search.png" alt="search"
+                /></label>
+                <input
+                  type="text"
+                  id="navbarSearchBox"
+                  name="query"
+                  placeholder="Cari produk..."
+                />
+              </form>
+            </div>
+            <li><a href="index.html" class="home">Home</a></li>
+            <li>
+              <a href="cetak_undangan.html" class="links">Cetak Undangan</a>
+            </li>
+            <li><a href="services/aboutus.html" class="links">About Us</a></li>
+            <li><a href="services/contact.html" class="links">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="user-options">
+          <a href="#" class="cart" id="cartButton">
+            <img src="../resources/img/icons/shoppingcart.png" alt="Cart" />
+            <span class="cart-count" id="cart-count" style="display: none"
+              >0</span
+            >
+          </a>
+        </div>
+      </nav>
+
+      <!-- Menampilkan hasil pencarian -->
+      <div id="navbarSearchResults" class="search-results"></div>
+
+      <!-- Items Product -->
+      <div class="product-container">
+        <div class="product-content">
+          <!-- Product 1 -->
+          <div class="product-card">
+            <img
+              class="product"
+              src="../resources/img/homeimg/pernikahan.jpg"
+              alt="Undangan Pernikahan"
+            />
+
+            <p class="product-name">Undangan Pernikahan Elegan</p>
+            <p class="product-price">Rp. 30.000</p>
+            <p class="category">Kategori: Pernikahan</p>
+            <div class="description">
+              <p>
+                Undangan pernikahan dengan desain yang elegan dan romantis.
+                Cocok untuk momen spesial pernikahan Anda.
+              </p>
+            </div>
+
+            <a href="productdetail.html" class="detail-button">Detail</a>
+          </div>
+
+          <!-- Product 2 -->
+          <div class="product-card">
+            <img
+              class="product"
+              src="../resources/img/homeimg/pernikahan.jpg"
+              alt="Undangan Pernikahan Premium"
+            />
+
+            <p class="product-name">Undangan Pernikahan Premium</p>
+            <p class="product-price">Rp. 45.000</p>
+            <p class="category">Kategori: Pernikahan</p>
+            <div class="description">
+              <p>
+                Undangan pernikahan premium dengan kualitas cetak terbaik dan
+                desain yang lebih mewah.
+              </p>
+            </div>
+
+            <a href="productdetail.html" class="detail-button">Detail</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <footer class="footer animate-slide-top animate-delay-2">
+        <div class="footer-container">
+          <div class="footer-section">
+            <h2>Cetak Undangan</h2>
+            <ul>
+              <li>
+                <a href="">
+                  <img
+                    src="../resources/img/icons/media.png"
+                    alt="Pernikahan"
+                  />
+                  Undangan Pernikahan
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <img src="../resources/img/icons/media.png" alt="Khitanan" />
+                  Undangan Khitanan
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <img
+                    src="../resources/img/icons/media.png"
+                    alt="Ulang Tahun"
+                  />
+                  Undangan Ulang Tahun
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-section">
+            <h2>Social Media & Contact</h2>
+            <ul>
+              <li>
+                <a href="https://www.instagram.com/photostice_" target="_blank">
+                  <img
+                    src="../resources/img/icons/instagram.png"
+                    alt="Instagram"
+                  />
+                  PleeArt.
+                </a>
+              </li>
+              <li>
+                <a href="https://twitter.com/plee_art" target="_blank">
+                  <img src="../resources/img/icons/twitter.png" alt="Twitter" />
+                  PleeArt.
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://wa.me/6287853338254?text=Halo%20saya%20tertarik%20dengan%20produk%20anda!"
+                  target="_blank"
+                >
+                  <img
+                    src="../resources/img/icons/whatsapp.png"
+                    alt="WhatsApp"
+                  />
+                  087853338254
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-section">
+            <h2>Other</h2>
+            <ul>
+              <li>
+                <a href="services/termofuse.html">
+                  <img
+                    src="../resources/img/icons/termofuse.png"
+                    alt="Term Of Use"
+                  />Terms of Use
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <a href="services/aboutus.html">
+            <p>Tentang Kami &raquo;</p>
+          </a>
+          <p>&copy; 2024 by Plee.Art. All rights reserved.</p>
+        </div>
+      </footer>
+    </div>
+
+    <!-- Script -->
+    <script src="../resources/js/burgersidebar.js"></script>
+    <script src="../resources/js/livesearch.js"></script>
+    <script>
+      const cartButton = document.getElementById("cartButton");
+      const cartDropdown = document.getElementById("cartDropdown");
+
+      function toggleCartDropdown() {
+        if (
+          cartDropdown &&
+          (cartDropdown.style.display === "none" ||
+            cartDropdown.style.display === "")
+        ) {
+          cartDropdown.style.display = "block";
+        } else if (cartDropdown) {
+          cartDropdown.style.display = "none";
+        }
+      }
+
+      if (cartButton) {
+        cartButton.addEventListener("click", function (event) {
+          event.preventDefault();
+          toggleCartDropdown();
+        });
+
+        document.addEventListener("click", function (event) {
+          if (
+            !cartButton.contains(event.target) &&
+            !cartDropdown?.contains(event.target)
+          ) {
+            if (cartDropdown) cartDropdown.style.display = "none";
+          }
+        });
+      }
+    </script>
+  </body>
+</html>
